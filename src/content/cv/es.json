@@ -154,6 +154,19 @@
   ],
   "projects": [
     {
+      "name": "INGCapaDev AI Workflow",
+      "isActive": true,
+      "description": "Flujo de desarrollo IA ligero con \"human in the loop\" para OpenCode — planificación colaborativa, tareas pequeñas, evidencia enfocada y revisión en dos ejes, con su landing en Astro.",
+      "highlights": [
+        "OpenCode",
+        "AI harness",
+        "Astro",
+        "AI Skills"
+      ],
+      "url": "https://ai.ingcapadev.com/",
+      "github": "https://github.com/INGCapaDev/ingcapadev-ai-workflow"
+    },
+    {
       "name": "Aura Series API",
       "isActive": true,
       "description": "API para Aura Series, una plataforma de redes sociales para compartir y descubrir nuevas series, con funciones de búsqueda y recomendación.",
