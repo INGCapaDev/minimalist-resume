@@ -145,14 +145,6 @@ const redirectURL = lang === 'en' ? '/es' : '/';
     font-weight: 500;
     font-size: 1rem;
     text-wrap: balance;
-    font-family:
-      'JetBrains Mono Variable',
-      Menlo,
-      Monaco,
-      Lucida Console,
-      'Courier New',
-      Courier,
-      monospace;
   }
 
   img {
@@ -196,6 +188,24 @@ const redirectURL = lang === 'en' ? '/es' : '/';
   footer a:hover {
     background-color: var(--hover-background);
     border: 1px solid var(--darker-hover-background);
+  }
+
+  @media screen {
+    h1 {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      line-height: 1.5;
+    }
+
+    span,
+    footer {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
   }
 
   @media (max-width: 500px) {

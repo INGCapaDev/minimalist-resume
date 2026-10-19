@@ -14,9 +14,9 @@ dependencies:
   '@fontsource-variable/inter':
     specifier: ^5.0.18
     version: 5.0.18
-  '@fontsource-variable/jetbrains-mono':
-    specifier: ^5.0.21
-    version: 5.0.21
+  '@fontsource/dm-mono':
+    specifier: ^5.3.0
+    version: 5.3.0
   astro:
     specifier: ^4.10.3
     version: 4.10.3(typescript@5.4.5)
@@ -645,8 +645,8 @@ packages:
     resolution: {integrity: sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==}
     dev: false
 
-  /@fontsource-variable/jetbrains-mono@5.0.21:
-    resolution: {integrity: sha512-LL/57KBbM3r0UMuN6tSeYExiBObt0QuGq49m1FyoDFIv1GAcuKU0EQ/GAKJ/yt3R8onOCD3f5X9Dln//G6uzRQ==}
+  /@fontsource/dm-mono@5.3.0:
+    resolution: {integrity: sha512-OINjI8C1S/wpchhQxl7njZdMn4+hnDCpQ4YtvvOpKNARo+0J8O1x1IcrChxNjHOhfVv1by8C/FQoy3hXK+C1Ug==}
     dev: false
 
   /@img/sharp-darwin-arm64@0.33.4:

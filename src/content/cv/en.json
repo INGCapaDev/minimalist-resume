@@ -167,15 +167,14 @@
     },
     {
       "name": "Aura Series API",
-      "isActive": true,
+      "isActive": false,
       "description": "API for Aura Series, a social media platform for sharing and discovering new series, with search and recommendation features.",
       "highlights": [
         "Massive user base",
         "NestJS & Neo4J",
         "Mailing",
         "Authentication"
-      ],
-      "url": "https://www.auraseries.com/"
+      ]
     },
     {
       "name": "Personal Blog",

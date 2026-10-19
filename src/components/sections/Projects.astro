@@ -15,24 +15,48 @@ const t = useTranslations(lang);
       <li>
         <article>
           <header>
-            <h3>
-              <a
-                href={url}
-                title={`${t('projects.link')} ${name}`}
-                target='_blank'>
-                {name}
-              </a>
-              {isActive && <span>&bull;</span>}
-              {github && (
-                <a
-                  class='github-code-link'
-                  href={github}
-                  target='_blank'
-                  title={`${t('projects.sourceCode')} ${name}${t('projects.sourceCodeFollowing')}`}>
-                  <GitHub />
-                </a>
+            <div class='project-heading'>
+              <h3>
+                {url ? (
+                  <a
+                    href={url}
+                    title={`${t('projects.link')} ${name}`}
+                    target='_blank'
+                    rel='noopener noreferrer'>
+                    {name}
+                  </a>
+                ) : (
+                  name
+                )}
+                {isActive && <span>&bull;</span>}
+              </h3>
+              {(url || github) && (
+                <nav
+                  class='project-links'
+                  aria-label={`${t('projects.links')} ${name}`}>
+                  {url && (
+                    <a
+                      href={url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      title={`${t('projects.link')} ${name}`}>
+                      {t('projects.website')}{' '}
+                      <span aria-hidden='true'>↗</span>
+                    </a>
+                  )}
+                  {github && (
+                    <a
+                      href={github}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      title={`${t('projects.sourceCode')} ${name}${t('projects.sourceCodeFollowing')}`}>
+                      <span aria-hidden='true'><GitHub /></span>{' '}
+                      {t('projects.source')}
+                    </a>
+                  )}
+                </nav>
               )}
-            </h3>
+            </div>
             <p>{description}</p>
           </header>
           <footer>
@@ -47,25 +71,37 @@ const t = useTranslations(lang);
 </ul>
 
 <style>
-  .github-code-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 13px;
-    width: 13px;
-    transition: all 0.2s ease;
-    margin-left: 4px;
-  }
-
-  .github-code-link:hover {
-    transform: scale(1.1);
-  }
-
   ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-inline: -16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  li + li {
+    border-top: 1px solid var(--projects-background);
+    margin-top: 24px;
+    padding-top: 24px;
+  }
+
+  article {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 24px;
+    margin-bottom: 8px;
+  }
+
+  article h3 {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 600;
   }
 
   @keyframes pulse {
@@ -78,35 +114,15 @@ const t = useTranslations(lang);
     }
   }
 
-  article {
-    border-radius: 8px;
-    border: 1px solid var(--projects-background);
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    height: 100%;
-  }
-
-  article header {
-    flex: 1;
-  }
-
-  article h3 {
-    margin-bottom: 4px;
-    font-weight: 600;
-  }
-
   article h3 span {
     color: var(--projects-active);
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     margin-left: 2px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   article p {
-    font-size: 0.75rem;
-    line-height: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   article a {
@@ -117,19 +133,71 @@ const t = useTranslations(lang);
     text-decoration: underline;
   }
 
-  footer {
+  .project-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    font-size: 0.6rem;
+    gap: 16px;
   }
 
-  footer span {
-    border-radius: 6px;
-    background: var(--hover-background);
-    color: var(--secondary-text);
-    font-size: 0.6rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
+  .project-links,
+  footer {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .project-links span {
+    color: var(--soft-primary-text);
+    display: inline-flex;
+  }
+
+  footer {
+    color: var(--primary-text);
+    font-family: var(--font-mono);
+    letter-spacing: normal;
+  }
+
+  footer span + span::before {
+    content: '•';
+    color: var(--soft-primary-text);
+    margin: 0 0.35em;
+  }
+
+  @media screen {
+    li + li {
+      margin-top: 32px;
+      padding-top: 32px;
+    }
+
+    article h3 {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    article p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .project-links,
+    footer {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  @media print {
+    li {
+      break-inside: avoid;
+    }
+
+    article h3 span {
+      animation: none;
+    }
   }
 </style>

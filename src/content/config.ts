@@ -66,7 +66,7 @@ const resumeSchema = z.object({
     z.object({
       name: z.string(),
       description: z.string(),
-      url: z.string().url(),
+      url: z.string().url().optional(),
       highlights: z.array(z.string()),
       github: z.string().url().optional(),
       isActive: z.boolean().optional().default(false),

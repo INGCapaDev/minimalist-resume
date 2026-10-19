@@ -168,15 +168,14 @@
     },
     {
       "name": "Aura Series API",
-      "isActive": true,
+      "isActive": false,
       "description": "API para Aura Series, una plataforma de redes sociales para compartir y descubrir nuevas series, con funciones de búsqueda y recomendación.",
       "highlights": [
         "Gran base de usuarios",
         "NestJS & Neo4J",
         "Envío de correos",
         "Autenticación"
-      ],
-      "url": "https://www.auraseries.com/"
+      ]
     },
     {
       "name": "Blog Personal",
