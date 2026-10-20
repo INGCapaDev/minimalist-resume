@@ -1,25 +1,25 @@
 {
   "basics": {
     "name": "Alvaro Capaceta Magallanes",
-    "label": "Desarrollador Full-Stack con enfoque en Backend, especializado en desarrollo web y dedicado a crear experiencias digitales impactantes y funcionales",
+    "label": "Desarrollador full-stack con enfoque en backend. Construyo productos web que funcionan.",
     "image": "/me.webp",
     "email": "ingcapadev@gmail.com",
     "phone": "+52 6692108089",
     "url": "https://ingcapadev.com",
     "summary": [
       {
-        "paragraph": "Soy un chico esforzándose por dejar huella en el mundo del desarrollo web bajo el nombre de INGCapaDev. Tengo experiencia en entornos de startups, donde he acelerado el desarrollo y colaborando en proyectos para clientes. Mis habilidades proactivas para resolver problemas aseguran una funcionalidad óptima, un diseño impresionante y experiencias de usuario excepcionales."
+        "paragraph": "Soy Alvaro, desarrollador full-stack y construyo bajo el nombre de INGCapaDev. He trabajado en entornos de startup, entregando features y colaborando con clientes en productos reales. Me importa resolver el problema correcto, mantener el código limpio y que el producto se sienta simple."
       },
       {
-        "paragraph": "Impulsado por mi pasión por la productividad, creo herramientas personalizadas para aumentar mi eficiencia, a menudo convirtiéndome en mi propio cliente. Comparto mi trayectoria y conocimientos en mi blog personal, el link se encuentra en la sección de proyectos, fusionando mi amor por el desarrollo web y mi compromiso con la superación personal."
+        "paragraph": "Creo herramientas para reducir fricción en mi propio trabajo, así que casi siempre soy mi primer usuario. Escribo lo que aprendo en mi blog, que puedes encontrar en la sección de proyectos. Esa mezcla de construir y escribir es cómo sigo mejorando."
       },
       {
-        "paragraph": "Mi objetivo es simplificar y mejorar la vida de las personas a través de la innovación digital, cultivando y expandiendo la marca INGCapaDev, y creando un impacto duradero en la comunidad de desarrollo web."
+        "paragraph": "A largo plazo, quiero que INGCapaDev sea conocido por software útil y pensamiento claro. Eso me importa más que sacar más features."
       }
     ],
 
     "location": {
-      "city": "Mazatlan",
+      "city": "Mazatlán",
       "region": "Sinaloa"
     },
     "profiles": [
@@ -46,7 +46,7 @@
       "position": "Desarrollador Full-Stack",
       "startDate": "2023-10-02",
       "endDate": null,
-      "summary": "Desarrollo de una herramienta de cotización y e-commerce para la venta de material electrico, colaboré en el diseño e implementación de varias vistas e interfaces del e-commerce. Además, desarrollé scripts en TypeScript para gestionar nuestra base de datos Firebase a gran escala. También diseñé APIs para análisis exhaustivos de recolección de datos, implementé características de inteligencia artificial en un chatbot y rediseñé con éxito el proceso de pago para aumentar significativamente las tasas de conversión de ventas.",
+      "summary": "Trabajo en una herramienta de cotización y e-commerce para material eléctrico. Ayudé a diseñar y construir varias vistas e interfaces del e-commerce, escribí scripts en TypeScript para manejar una base de datos Firebase a gran escala y desarrollé APIs para recolectar y analizar datos. También agregué funciones de IA a un chatbot y rediseñé el proceso de pago para mejorar la conversión.",
       "highlights": [""],
       "isRemote": true
     },
@@ -55,7 +55,7 @@
       "position": "Web Developer",
       "startDate": "2023-06-02",
       "endDate": "2023-10-02",
-      "summary": "Desarrollé APIs escalables con NestJS, integrando las bases de datos Neo4J, SQL, Firebase y SQLite. Creé microservicios para correos, autenticación, informes y almacenamiento utilizando Firebase y Cloudflare R2. Implementé Google Analytics para el seguimiento de datos en múltiples sitios web. Diseñé landing pages dinámicas y responsivas  con React, NextJS y Tailwind CSS, y converti diseños de Figma en sitios web interactivos. Construí aplicaciones web complejas utilizando React, Vite y Redux Toolkit para la gestión avanzada de estado y efectos secundarios.",
+      "summary": "Construí APIs con NestJS y las conecté con Neo4j, SQL, Firebase y SQLite. También creé microservicios para correo, autenticación, reportes y almacenamiento con Firebase y Cloudflare R2, implementé Google Analytics en varios sitios y convertí diseños de Figma en landing pages responsivas con React, Next.js y Tailwind. Trabajé en aplicaciones React más grandes con Vite y Redux Toolkit para manejar estado y efectos secundarios.",
       "highlights": [""],
       "isRemote": true
     }
@@ -111,7 +111,7 @@
       "name": "Firebase"
     },
     {
-      "name": "Neo4J"
+      "name": "Neo4j"
     },
     {
       "name": "React / Next.js"
@@ -156,7 +156,7 @@
     {
       "name": "INGCapaDev AI Workflow",
       "isActive": true,
-      "description": "Flujo de desarrollo IA ligero con \"human in the loop\" para OpenCode — planificación colaborativa, tareas pequeñas, evidencia enfocada y revisión en dos ejes, con su landing en Astro.",
+      "description": "Un flujo ligero con human in the loop para desarrollo asistido por IA en OpenCode. Se enfoca en planificación colaborativa, tareas pequeñas, evidencia clara y revisión desde dos ángulos, con su landing en Astro.",
       "highlights": [
         "OpenCode",
         "AI harness",
@@ -169,23 +169,23 @@
     {
       "name": "Aura Series API",
       "isActive": false,
-      "description": "API para Aura Series, una plataforma de redes sociales para compartir y descubrir nuevas series, con funciones de búsqueda y recomendación.",
+      "description": "API privada para Aura Series, una plataforma social para compartir y descubrir series. Cubre búsqueda, recomendaciones, autenticación y correo para una base grande de usuarios.",
       "highlights": [
-        "Gran base de usuarios",
-        "NestJS & Neo4J",
-        "Envío de correos",
+        "Base grande de usuarios",
+        "NestJS & Neo4j",
+        "Correo",
         "Autenticación"
       ]
     },
     {
       "name": "Blog Personal",
       "isActive": true,
-      "description": "Mi blog personal donde comparto mis experiencias y conocimientos sobre desarrollo web, productividad y otros temas interesantes.",
+      "description": "Mi blog personal sobre desarrollo web, productividad y lo que voy aprendiendo. Está disponible en inglés y español, hecho con Astro, y tiene 100/100 en Lighthouse.",
       "highlights": [
-        "Multidioma",
-        "Optimizado para SEO",
-        "100/100 en Lighthouse",
-        "Preparado para PWA",
+        "Inglés y español",
+        "SEO",
+        "Lighthouse 100/100",
+        "PWA",
         "Astro"
       ],
       "url": "https://blog.ingcapadev.com/es",
@@ -194,11 +194,11 @@
     {
       "name": "JB Baseball Game",
       "isActive": true,
-      "description": "Un simulador de juego de béisbol que te permite marcar todas las jugadas disponibles en un juego de béisbol y guardar un registro de las jugadas de los jugadores.",
+      "description": "Un simulador de béisbol para marcar jugadas y llevar un registro de lo que hace cada jugador. Está pensado para jugar en pantalla completa, con efectos de sonido y gestión de estado para un juego completo.",
       "highlights": [
-        "Orientado a pantalla completa",
+        "Pantalla completa",
         "Efectos de sonido",
-        "Gestión de estado compleja",
+        "Gestión de estado",
         "React",
         "Redux Toolkit"
       ],

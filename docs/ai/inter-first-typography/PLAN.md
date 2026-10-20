@@ -83,7 +83,7 @@ Evidence:
 
 ### S2 — Screen reading scale and hierarchy
 
-Status: ready-for-review
+Status: complete
 Depends on: S1
 
 - Apply the agreed screen type scale and spacing through existing owners, including editorial projects shared with print and a GitHub icon beside Source. Non-project print styling remains at the accepted S1 baseline.
@@ -97,7 +97,7 @@ Evidence:
 - Headless Edge on `/` and `/es` at 390px, 768px, and 1280px confirms exact target name/section/entry/body sizes and line heights, 14px dates, badges at least 12px, normal letter spacing, and no horizontal page overflow. Content/link comparisons and light/dark toggle/local-storage checks pass. English desktop and Spanish mobile screenshots visually inspected; artifacts are in the approved temporary folder under `resume-s2-*`.
 - Before/after print-media snapshots at all six locale/viewport combinations have identical computed typography, spacing, colors, visibility, and element geometry. A4 output remains three pages in each language. A first probe expected raw `65ch` rather than resolved CSS pixels; corrected that assertion. Another captured transitioning icon links immediately after theme/media changes; waiting for the existing 0.2s CSS transitions to settle yields exact matches without application changes.
 - Final `pnpm exec astro check`: 42 files, zero errors/warnings/hints. `git diff --check` passes with only line-ending policy notices. An initial structural probe detected Certificates' new final newline; normalizing only trailing whitespace confirms no non-style source delta. No build, new repository tests, independent review, commit, push, or deployment. Unchanged S1 font-loading evidence is reused; this slice does not alter fonts.
-- Dev PDFs retain the already-disclosed Astro-toolbar artifact; browser print snapshots establish preservation, not production-build print proof. S3 has not been executed. Human acceptance of S2 is pending.
+- Dev PDFs retain the already-disclosed Astro-toolbar artifact; browser print snapshots establish preservation, not production-build print proof. S3 had not been executed at this checkpoint. Human acceptance of S2 was pending.
 - Human requested more project breathing room, then selected the editorial list and supplied an image. The earlier grid candidate is superseded; its unchanged non-project typography evidence remains useful. Recheck project layout, localized actions, preserved copy/links, and print preservation after this adjustment.
 
 Editorial-adjustment evidence:
@@ -126,16 +126,42 @@ Pulse, private-project, and highlight refinement:
 - Light-theme desktop and print-media projects screenshots visually inspected in the approved temporary folder; both show the private unlinked Aura row, mono highlights, bullets, and visible print actions. Dev PDF caveat remains.
 - `pnpm exec astro check` reports zero errors/warnings/hints across 42 files; `git diff --check` passes. No build, new repository tests, independent review, or S3 execution. The human explicitly authorized committing the completed S2 changes; the unrelated pre-existing `.atl/` directory is excluded. S2 remains ready for acceptance.
 
+Post-commit dark-mode title correction:
+
+- Human reported that the unlinked Aura Series API title did not render correctly in dark mode. Root cause: linked project titles use `article a { color: var(--black-text); }`, while the unlinked title text inherited the browser's default black body color; the dark background is `#121212`.
+- Added `color: var(--black-text)` to the shared project `h3` owner in `src/components/sections/Projects.astro`. Linked and unlinked titles now use the same theme token. No content, layout, pulse, interaction, or print-rule change.
+- Edge checks on `/` and `/es` at 390/768/1280px in dark and light themes confirm all four project headings use `rgb(238, 238, 238)` in dark and `rgb(17, 17, 17)` in light, the Aura title has 16.15:1 contrast against `rgb(18, 18, 18)`, the other three active indicators still pulse, print checks pass with the light-theme baseline, and no horizontal overflow occurs. English dark-mode screenshot visually inspected.
+- `pnpm exec astro check` reports zero errors/warnings/hints across 42 files. `git diff --check` passes with the existing line-ending policy notice. Content JSON, UI dictionary, and font files are byte-identical to the S3 baseline. Human authorized committing the correction as `f04c736`; S2 is complete. No build, new tests, independent review, push, or deployment.
+
 ### S3 — Natural bilingual content proposal
 
-Status: pending
+Status: complete
 
 - Review the website's English/Spanish copy against the external Content OS tone sources. Produce a focused, section-by-section before/after proposal with brief reasons; include natural replacements for em dashes and generic or inflated language.
-- Acceptance: suggestions sound direct, human, practical, and like the user's grounded developer voice; both languages preserve equivalent meaning and all factual details. Flag claims needing confirmation. Keep resume-appropriate structure rather than copying LinkedIn presentation rules. No live copy changes or external-project writes.
+- Acceptance: suggestions sound direct, human, practical, and like the user's grounded developer voice; both languages preserve equivalent meaning and all factual details. Flag claims needing confirmation. Keep resume-appropriate structure rather than copying LinkedIn presentation rules. The proposal phase made no live copy changes or external-project writes; the human subsequently approved applying it to this repository.
 - Verification: trace each recommendation to current source text and relevant voice guidance; check proposed copy for remaining em dashes, filler, unsupported additions, and English/Spanish inconsistencies. Deliver the proposal in this plan's folder, referenced here without duplicating progress.
 - Execution follows acceptance of the current slice; no parallel or grouped execution is authorized.
 
+Evidence:
+
+- Read the Content OS voice sources and the current English/Spanish copy. Delivered `docs/ai/inter-first-typography/S3-CONTENT-PROPOSAL.md`.
+- Proposal covers the hero label, About, both experience entries, four projects, metadata, UI labels, optional soft skills, technical naming, and factual checks. Each recommendation includes current text, proposed text, reason, and a confirmation item.
+- All 22 "before" blocks match current source text. All 22 "after" blocks contain no em dashes or the identified filler terms. English and Spanish preserve equivalent meaning and detail; no new metrics, clients, stories, or results were added. Unverified claims are flagged.
+- No live copy or external-project changes during the proposal phase. The proposal is referenced from this plan without duplicating its full text.
+
+Implementation authorization:
+
+> Make the changes described on the @docs/ai/inter-first-typography/S3-CONTENT-PROPOSAL.md I approve all of them.
+
+Implementation evidence:
+
+- Applied the approved hero label, About paragraphs, experience summaries, project descriptions, project tag changes, metadata description, Spanish UI accents, certificate link label, localized theme-toggle label, and shorter hero link titles. Standardized Neo4j and Next.js naming, used Mazatlán in Spanish, and kept the canonical Alvaro spelling so the shared name field and Spanish metadata agree.
+- Kept the AI Workflow tags and the soft-skills list unchanged because the proposal marks them as conditional or evidence-dependent rather than final copy. No new skills, metrics, clients, stories, or results were added.
+- Browser checks on `/` and `/es` at 390/768/1280px confirm the applied copy, no em dashes in rendered content, absence of the old filler phrases, correct hero link titles, localized theme-toggle label, certificate title, metadata, project descriptions/tags/actions, and the private Aura row. Aura remains visible in dark mode; all project titles use the theme text color. Light, dark, and print checks pass with no horizontal overflow.
+- A4 output remains three pages per locale. `pnpm exec astro check` reports zero errors/warnings/hints across 42 files; `git diff --check` passes with only existing line-ending notices. Human authorized committing the implementation on 2026-10-19; the S3 changes, plan update, and proposal are included in that commit. No push, deployment, or independent review was performed.
+
 ## Current progress
 
-- Current slice: S2.
-- Next action: obtain human acceptance of revised S2 before starting S3. The authorized commit includes the completed S2 source and plan changes.
+- Current slice: S3 complete.
+- Next action: none within this plan. No push or deployment is authorized.
+- The S2 dark-mode correction is committed as `f04c736`; the S3 copy changes, plan update, and proposal are committed together. `.atl/` remains pre-existing and untracked.

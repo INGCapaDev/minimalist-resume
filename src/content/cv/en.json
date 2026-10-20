@@ -1,20 +1,20 @@
 {
   "basics": {
     "name": "Alvaro Capaceta Magallanes",
-    "label": "Full-Stack Developer with a Backend focus, specializing in web development and dedicated to creating impactful and functional digital experiences",
+    "label": "Full-stack developer with a backend focus. I build web products that work.",
     "image": "/me.webp",
     "email": "ingcapadev@gmail.com",
     "phone": "+52 6692108089",
     "url": "https://ingcapadev.com",
     "summary": [
       {
-        "paragraph": "I'm a guy striving to make a mark in the web development world under the name INGCapaDev. I have experience in startup environments, where I've accelerated development and collaborating on client projects. My proactive problem-solving skills ensure optimal functionality, stunning design, and exceptional user experiences."
+        "paragraph": "I'm Alvaro, a full-stack developer building under the name INGCapaDev. I've worked in startup environments, shipping features and collaborating with clients on real products. I care about solving the right problem, keeping the code clean, and making the product feel simple."
       },
       {
-        "paragraph": "Fueled by my passion for productivity, I create custom tools to boost efficiency, often becoming my own client. I share my journey and insights on my personal blog, which you can find linked in the projects section, merging my love for web development with my commitment to self-improvement."
+        "paragraph": "I build tools to remove friction from my own work, so I'm often my first user. I write about what I learn on my blog, which you can find in the projects section. That mix of building and writing is how I keep improving."
       },
       {
-        "paragraph": "My goal is to simplify and enhance people's lives through digital innovation, cultivating and expanding the INGCapaDev brand, and creating a lasting impact on the web development community."
+        "paragraph": "Long term, I want INGCapaDev to be known for useful software and clear thinking. That matters more to me than shipping more features."
       }
     ],
     "location": {
@@ -45,7 +45,7 @@
       "position": "Full-Stack Developer",
       "startDate": "2023-10-02",
       "endDate": null,
-      "summary": "Development of a quoting and e-commerce tool for the sale of electrical materials, I collaborated on the design and implementation of various e-commerce views and interfaces. Additionally, I developed TypeScript scripts to manage our Firebase database at scale. I also designed APIs for comprehensive data collection analytics, implemented artificial intelligence features into a chatbot, and successfully redesigned the checkout process to significantly increase sales conversion rates.",
+      "summary": "I work on a quoting and e-commerce tool for electrical materials. I helped design and build several storefront views, wrote TypeScript scripts to manage a large Firebase database, and built APIs for data collection and analytics. I also added AI features to a chatbot and redesigned the checkout flow, which helped increase conversion.",
       "highlights": [""],
       "isRemote": true
     },
@@ -54,7 +54,7 @@
       "position": "Web Developer",
       "startDate": "2023-06-02",
       "endDate": "2023-10-02",
-      "summary": "Developed scalable APIs with NestJS, integrating Neo4J, SQL, Firebase, and SQLite databases. Created microservices for mailing, authentication, reporting, and storage using Firebase and Cloudflare R2. Implemented Google Analytics for data tracking across multiple websites. Designed dynamic, responsive landing pages with React, NextJS, and Tailwind CSS, and translated Figma designs into interactive websites. Built complex web applications using React, Vite, and Redux Toolkit for advanced state management and side effects.",
+      "summary": "I built APIs with NestJS and connected them to Neo4j, SQL, Firebase, and SQLite. I also built microservices for email, authentication, reporting, and storage with Firebase and Cloudflare R2, set up Google Analytics across several sites, and turned Figma designs into responsive landing pages with React, Next.js, and Tailwind. I worked on larger React apps with Vite and Redux Toolkit for state and side effects.",
       "highlights": [""],
       "isRemote": true
     }
@@ -110,7 +110,7 @@
       "name": "Firebase"
     },
     {
-      "name": "Neo4J"
+      "name": "Neo4j"
     },
     {
       "name": "React / Next.js"
@@ -155,7 +155,7 @@
     {
       "name": "INGCapaDev AI Workflow",
       "isActive": true,
-      "description": "Lightweight human-in-the-loop AI development workflow for OpenCode — collaborative planning, small tasks, focused evidence, and two-axis review, with its Astro landing.",
+      "description": "A lightweight, human-in-the-loop workflow for AI-assisted development in OpenCode. It focuses on collaborative planning, small tasks, clear evidence, and review from two angles, with an Astro landing page.",
       "highlights": [
         "OpenCode",
         "AI harness",
@@ -168,23 +168,23 @@
     {
       "name": "Aura Series API",
       "isActive": false,
-      "description": "API for Aura Series, a social media platform for sharing and discovering new series, with search and recommendation features.",
+      "description": "Private API for Aura Series, a social platform for sharing and discovering series. It covers search, recommendations, authentication, and email for a large user base.",
       "highlights": [
-        "Massive user base",
-        "NestJS & Neo4J",
-        "Mailing",
+        "Large user base",
+        "NestJS & Neo4j",
+        "Email",
         "Authentication"
       ]
     },
     {
       "name": "Personal Blog",
       "isActive": true,
-      "description": "My personal blog where I share my experiences and knowledge about web development, productivity and other interesting topics.",
+      "description": "My personal blog about web development, productivity, and whatever I'm learning. It's available in English and Spanish, built with Astro, and scores 100/100 on Lighthouse.",
       "highlights": [
-        "Multilanguage",
-        "SEO optimized",
-        "100/100 Lighthouse score",
-        "PWA Ready",
+        "English & Spanish",
+        "SEO",
+        "Lighthouse 100/100",
+        "PWA",
         "Astro"
       ],
       "url": "https://blog.ingcapadev.com/",
@@ -193,11 +193,11 @@
     {
       "name": "JB Baseball Game",
       "isActive": true,
-      "description": "A baseball game simulator, which allow you to mark all the plays available in a baseball game and save a record of the players' plays.",
+      "description": "A baseball game simulator for scoring plays and keeping a record of what each player does. It's designed for fullscreen play, with sound effects and state management for a full game.",
       "highlights": [
-        "Fullscreen oriented",
+        "Fullscreen",
         "Sound effects",
-        "Complex state management",
+        "State management",
         "React",
         "Redux Toolkit"
       ],

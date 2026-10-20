@@ -50,7 +50,7 @@ const redirectURL = lang === 'en' ? '/es' : '/';
         email && (
           <a
             href={`mailto:${email}`}
-            title={`${t('hero.sendEmail')} ${name} ${t('hero.emailFollowing')} ${email}`}
+            title={`${t('hero.sendEmail')} ${name}: ${email}`}
             target='_blank'
             rel='noopener noreferrer'>
             <Mail />
@@ -61,7 +61,7 @@ const redirectURL = lang === 'en' ? '/es' : '/';
         phone && (
           <a
             href={`tel:${phone}`}
-            title={`${t('hero.phone')} ${name} ${t('hero.phoneFollowing')} ${phone}`}
+            title={`${t('hero.phone')} ${name}: ${phone}`}
             target='_blank'
             rel='noopener noreferrer'>
             <Phone />
@@ -74,7 +74,7 @@ const redirectURL = lang === 'en' ? '/es' : '/';
           return (
             <a
               href={url}
-              title={`${t('hero.social')} ${network} ${t('hero.socialFollowing')} ${url}`}
+              title={`${t('hero.social')} ${network}: ${url}`}
               target='_blank'
               rel='noopener noreferrer'>
               <Icon />
@@ -85,7 +85,7 @@ const redirectURL = lang === 'en' ? '/es' : '/';
       <a href={redirectURL} title={t('changeLanguage')}>
         <Language />
       </a>
-      <ToggleTheme />
+      <ToggleTheme label={t('commands.toggleTheme')} />
     </footer>
   </div>
   <figure>

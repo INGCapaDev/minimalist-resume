@@ -1,4 +1,12 @@
-<button id='themeToggle' aria-label='Theme Toggle'>
+---
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<button id='themeToggle' aria-label={label}>
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
