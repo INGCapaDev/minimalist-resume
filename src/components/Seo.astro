@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  lang: 'en' | 'es';
+  image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  lang,
+  image = '/og/og-image.png',
+  imageAlt = 'INGCapaDev portfolio card for Alvaro Capaceta Magallanes, a full-stack developer with a backend focus.',
+  imageWidth = 1200,
+  imageHeight = 630,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://ingcapadev.com');
+const canonicalUrl = new URL(Astro.url.pathname, site).toString();
+const imageUrl = new URL(image, site).toString();
+const locale = lang === 'es' ? 'es_MX' : 'en_US';
+---
+
+<title>{title}</title>
+<meta name='description' content={description} />
+<link rel='canonical' href={canonicalUrl} />
+<meta property='og:type' content={type} />
+<meta property='og:site_name' content='INGCapaDev' />
+<meta property='og:locale' content={locale} />
+<meta property='og:url' content={canonicalUrl} />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:image' content={imageUrl} />
+<meta property='og:image:secure_url' content={imageUrl} />
+<meta property='og:image:type' content='image/png' />
+<meta property='og:image:width' content={String(imageWidth)} />
+<meta property='og:image:height' content={String(imageHeight)} />
+<meta property='og:image:alt' content={imageAlt} />
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:title' content={title} />
+<meta name='twitter:description' content={description} />
+<meta name='twitter:image' content={imageUrl} />
+<meta name='twitter:image:alt' content={imageAlt} />
+{noindex && <meta name='robots' content='noindex,nofollow' />}
